@@ -78,8 +78,8 @@ RUN python manage.py collectstatic --noinput
 RUN apt-get update && apt-get upgrade && apt-get clean autoclean && apt-get autoremove --yes --purge && rm -rf /var/lib/{apt,dpkg,cache,log}/
 # set locales. fr_FR and en_US must be available for sia urls to be computed correctly
 # RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
-  sed -i '/fr_FR.UTF-8/s/^# //g' /etc/locale.gen && \
-  locale-gen
+# sed -i '/fr_FR.UTF-8/s/^# //g' /etc/locale.gen && \
+# locale-gen
 ENV LANG fr_FR.UTF-8
 ENV LC_ALL fr_FR.UTF-8
 ENV LANGUAGE fr_FR.UTF-8
