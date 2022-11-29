@@ -1,0 +1,93 @@
+Categorie;BAD;BAD;Numero_court;Nom;Numero_long;Exterieur;Montrer_CDS;Montrer_W;Montrer_E;Alias
+AERODROMES;1;4400-4499;4400;LFAY TWR;00322381060;oui;oui;oui;non;Amiens TWR
+;;;4401;LFLA TWR;00386483196;oui;oui;non;oui;Auxerre
+;;;4402;LFLA TWR;00386483189;oui;oui;non;oui;Auxerre
+;;;4403;LFOA CDQ;00248684300;oui;oui;non;oui;Avord TWR
+;;;4404;LFFL;00237314374;oui;oui;oui;non;Baillau TWR
+;;;4405;LFOB TWR;03.44.84.69.34;oui;oui;oui;non;Beauvais TWR
+;;;4406;LFOQ TWR;00254201718;oui;oui;oui;non;Blois TWR
+;;;4407;LFLD IFR;00248503711;oui;oui;non;oui;Bourges
+;;;4408;LFFN;00662468330;oui;oui;non;oui;Brienne TWR
+;;;4409;Sissonne;00323254206;oui;oui;oui;non;
+;;;4410;LFEI;00238314807;oui;oui;non;oui;Briare Chatillon TWR
+;;;4411;LFRK;00231265681;oui;oui;oui;non;Caen 
+;;;4412;LFRK TWR;00231260918;oui;oui;oui;non;Caen TWR
+;;;4413;LFOX;00160809559;oui;oui;oui;oui;Etampes TWR
+;;;4414;LFAC TWR;00321001100;oui;oui;oui;non;Calais TWR
+;;;4415;LFAQ TWR;00322750601;oui;oui;oui;non;Albert Bray TWR
+;;;4416;LFQV TWR;00324529461;oui;oui;oui;non;Charleville TWR
+;;;4417;LFOC TWR;00237456267;oui;oui;oui;non;Chateaudun TWR
+;;;4418;LFLX TWR;00254294710;oui;oui;non;non;Chateauroux TWR
+;;;4419;LFRG TWR;00231656557;oui;oui;oui;non;Deauville TWR
+;;;4420;LFAB TWR;00235841440;oui;oui;oui;non;Dieppe TWR
+;;;4421;LFOE APP;00232621365;oui;oui;oui;non;Evreux APP
+;;;4422;;;;;;;
+;;;4423;LFOE;00232621388;oui;oui;oui;non;Evreux
+;;;4424;LF R9;00248276500;oui;non;non;non;
+;;;4425;LFRM TWR;00243843485;oui;oui;non;non;Le Mans
+;;;4426;LFAT A;00321066273;oui;non;non;non;Le Touquet
+;;;4427;LFQQ CDT;00320875139;oui;oui;non;non;Lille CDT
+;;;4428;LFQQ FMP;00320907181;oui;oui;non;non;Lille FMP
+;;;4429;SEINE CDT;00164142736;oui;oui;non;non;chef de tour
+;;;4430;LFQT TWR;00328484880;oui;oui;oui;non;Merville TWR
+;;;4431;LFQE;00329878238;oui;oui;non;oui?;Base Etain Rouvres
+;;;4432;LFJL;00387697362;oui;oui;non;oui;Metz Nancy Lorraine TWR
+;;;4433;LFBK TWR;00555657695;oui;oui;non;non;Montluçon Gueret TWR
+;;;4434;LFHY TWR;00470200379;oui;oui;non;oui;Moulins Montbeugny TWR
+;;;4435;LFQG TWR;00386570392;oui;oui;non;oui;Maubeuge TWR
+;;;4436;LFOJ APP;00238753854;oui;oui;oui;oui;Orleans Bricy APP
+;;;4437;LFOJ;00218697199;oui;oui;oui;oui;Orleans Bricy APP
+;;;4438;LFOB NBT 1;0.03.44.02.11.09;oui;oui;oui;non;Beauvais
+;;;4439;LFOB NBT 2;0.03.44.80.78.91;oui;oui;oui;non;Beauvais
+;;;4440;LFPT TWR;00130307159;oui;oui;oui;non;Pontoise TWR
+;;;4441;LFOZ *sec;02.38.46.33.33;oui;oui;non;oui;Orleans Saint Denis SEC
+;;;4442;LFSO TWR;00383527476;oui;oui;non;oui;Nancy Ochaey TWR
+;;;4443;LFQA TWR;00326491012;oui;oui;oui;oui;Reims Prunay TWR
+;;;4446;LFLN vigie;00385849022;oui;non;non;oui;Saint Yan vigie
+;;;4447;LFOP TWR;00235808001;oui;oui;oui;non;Rouen TWR
+;;;4448;LFOZ TWR;00238463339;oui;oui;non;oui;Orleans Saint Denis
+;;;4449;LFSI APP;00325057102;oui;oui;non;oui;Saint Dizier APP
+;;;4450;LFLN;00385266061;oui;oui;non;oui;Saint Yan
+;;;4451;;;;;;;
+;;;4452;LFOT AFIS;00247510632;oui;oui;oui;non;Tours Val de Loire AFIS
+;;;4453;LFPN TWR;00139566223;oui;oui;oui;non;Toussus le Noble TWR
+;;;4454;LFQB TWR;00325783001;oui;oui;non;oui;Troyes TWR
+;;;4455;LFAV TWR;00327211160;oui;oui;oui;non;Valenciennes TWR
+;;;4456;LFPV APP;00146327460;oui;oui;non;non;Villacoublay TWR
+;;;4457;SEINE CDT2;00164142737;oui;oui;non;non;chef de tour
+;;;4458;LFBL SIV;00555001809;oui;oui;oui;oui;Limoges SIV
+;;;4459;LFPE;00160043506;oui;oui;non;oui;Meaux TWR
+;;;4460;LFBI SIV; 05 49 37 94 29;oui;oui;oui;oui;Poitiers SIV
+;;;4461;LFOT*sec;07.64.87.74.59;oui;oui;oui;non;Tours sec
+;;;4462;;;oui;non;non;non;
+;;;4463;LFOD;00241506549;oui;oui;oui;non;Saumur
+;;;4464;LFJR;00241335004;oui;oui;non;non;Angers TWR
+;;;4465;LFOK;00326261582;oui;oui;non;oui;Vatry TWR
+;;;4466;LFQQ W;00320875426;oui;non;oui;non;Lille QW
+;;;4467;LFQQ EST;00320875435;oui;non;oui;non;Lille QE
+;;;4468;LFPI;00145540444;oui;oui;non;non;Issy les Moulineaux 
+;;;4470;LFOA APP;00248684080;oui;oui;oui;oui;Avord APP
+;;;4471;LFOH AFIS;00235546490;oui;oui;oui;non;Le Havre AFIS
+;;;4472;LFPL;00160053319;oui;oui;non;non;Lognes
+;;;4473;LFOA Secours;00248692572;oui;oui;oui;oui;Avord 
+;;;4474;LFPX;00134623078;oui;oui;non;non;Chavenay
+;;;4475;LFRS CDT;00228002573;oui;oui;non;non;Nantes CDT
+;;;4476;LFRS SIV;00240050768;oui;non;oui;non;Nantes SIV
+;;;4478;LFRS LU;02.40.05.22.73;oui;oui;oui;non;Nantes
+;;;4479;LFQG;00386572408;oui;oui;non;oui;Nevers 
+;;;4480;LFRN SIV;00299353510;oui;non;oui;non;Rennes SIV
+;;;4481;LFRN APP S;00299352153;oui;non;oui;non;Rennes APP
+;;;4482;LFRN CDT;00299677240;oui;oui;non;non;Rennes CDT
+;;;4483;LFRS CDT 24H;00251708517;oui;oui;non;non;Nantes CDT H24
+;;;4484;LFPZ;00130455401;oui;oui;non;non;Saint Cyr
+;;;4486;LFLC CDT;00473929817;oui;oui;non;non;Clermont CDT
+;;;4487;LFLC CY;00473781785;oui;non;non;oui;Clermont
+;;;4490;LFSB IF;00389902641;oui;oui;non;oui;Bâle
+;;;4491;LFPY;00160854511;oui;oui;non;non;Brétigny
+;;;4493;LFSB APP;00389907831;oui;oui;non;oui;Bâle APP
+;;;4494;LFST SIV;00388521350;oui;oui;non;oui;Strasbourg SIV
+;;;4495;LFLL SIV;00472239304;oui;oui;non;oui;Lyon SIV
+;;;4496;LFLL IF;00472239308;oui;oui;non;non;Lyon
+;;;4497;LFST CDT;00388686996;oui;oui;non;non;Strasbourg CDT
+;;;4498;LFRM BTIV;00243866526;oui;oui;non;non;Le Mans BTIV
+;;;4499;LFRM 24H;00243862515;oui;oui;non;non;Le Mans

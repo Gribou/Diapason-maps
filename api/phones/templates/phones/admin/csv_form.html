@@ -1,0 +1,30 @@
+
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}">
+{% endblock %}
+
+{% block title %}Importer CSV {{ block.super }}{% endblock %}
+
+{% block coltype %}colM{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <h1>Importer des données à partir d'un fichier CSV</h1>
+    <form action="." method="POST" enctype="multipart/form-data">
+        {{ form.as_p }}
+        {% csrf_token %}
+
+        <div class="submit-row">
+            <input class="default" type="submit" value="Importer" />
+            <p class="deletelink-box">
+                <a href="../" class="deletelink">Annuler</a>
+            </p>
+        </div>
+    </form>
+</div>
+<br />
+
+{% endblock %}
