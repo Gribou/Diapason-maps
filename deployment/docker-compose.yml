@@ -1,0 +1,106 @@
+version: "3.5"
+
+x-core-coconuts: &coconuts
+  image: registry.asap.dsna.fr/infogenestatique/diapason/diapason-maps/${COCONUTS_ROOT_URL:-coconuts}/${COCONUTS_IMAGE_TAG:-master}:latest}
+  restart: unless-stopped
+  networks:
+    - coconuts
+  depends_on:
+    - coconuts_db
+  volumes:
+    - ./media/:/app/api/media/
+    - ./backups/:/app/backups/
+  environment:
+    DEBUG: "False"
+    SECRET_KEY: ${SECRET_KEY}
+    ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+    http_proxy: ${HTTP_PROXY}
+    https_proxy: ${HTTPS_PROXY}
+    URL_ROOT: /${COCONUTS_ROOT_URL}/
+    WEB_PORT: ${WEB_PORT:-8000}
+    # ---------------------------------------------------------------
+    DB_ENGINE: django.db.backends.postgresql
+    DB_NAME: postgres
+    DB_USER: postgres
+    DB_PASSWORD: postgres
+    DB_HOST: coconuts_db
+    DB_PORT: 5432
+    # ---------------------------------------------------------------
+    EMAIL_BACKEND: django.core.mail.backends.smtp.EmailBackend
+    EMAIL_HOST: ${EMAIL_HOST}
+    EMAIL_PORT: ${EMAIL_PORT}
+    EMAIL_HOST_USER: ${EMAIL_HOST_USER}
+    EMAIL_HOST_PASSWORD: ${EMAIL_HOST_PASSWORD}
+    EMAIL_USE_TLS: ${EMAIL_USE_TLS:-False}
+    EMAIL_ADMIN: ${EMAIL_ADMIN}
+    # ---------------------------------------------------------------
+    SU_USERNAME: ${SU_USERNAME}
+    SU_PASSWORD: ${SU_PASSWORD}
+    SU_EMAIL: ${EMAIL_ADMIN}
+    UPDATE_AT_STARTUP: ${COCONUTS_UPDATE_AT_STARTUP:-no}
+    CELERY_QUEUE: my-coconuts
+    CELERY_BROKER_URL: redis://coconuts_redis:6379
+
+services:
+  coconuts_web:
+    <<: *coconuts
+    entrypoint: /bin/bash /app/scripts/wait-for-migrations.sh && /app/scripts/entrypoint.sh
+    healthcheck:
+      test: /bin/bash /app/scripts/healthcheck.sh
+      start_period: 60s
+      interval: 20s
+
+  coconuts_celery:
+    <<: *coconuts
+    depends_on:
+      - coconuts_redis
+    entrypoint: /bin/bash /app/scripts/migrate.sh && /app/scripts/celery.sh
+    healthcheck:
+        test: celery inspect ping
+        start_period: 15s
+
+  coconuts_redis:
+    image: redis:alpine
+    networks:
+      - coconuts
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 10s
+
+  coconuts_db:
+    image: postgres:alpine
+    restart: unless-stopped
+    networks:
+      - coconuts
+    volumes:
+      - coconuts_psql_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - 80:80
+    networks:
+      - coconuts
+    volumes:
+      - ./nginx.conf.template:/etc/nginx/templates/default.conf.template
+      - ./media/:/app/api/media/
+    depends_on:
+      coconuts_web:
+        condition: service_healthy
+    environment:
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS:-localhost}
+      WEB_PORT: ${WEB_PORT:-8000}
+
+volumes:
+  coconuts_psql_data:
+
+networks:
+  coconuts:
