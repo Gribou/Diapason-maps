@@ -1,0 +1,35 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+django-debug-toolbar = "*"
+coverage = "*"
+django-extensions = "*"
+lorem = "*"
+autopep8 = "*"
+
+[packages]
+psycopg2-binary = "*"
+django = "*"
+gunicorn = "*"
+djangorestframework = "*"
+whitenoise = "*"
+scrapy = "*"
+scrapy-djangoitem = "*"
+astral = "*"
+django-cors-headers = "*"
+django-constance = {extras = ["database"], version = "*"}
+celery = "*"
+redis = "*"
+django-celery-beat = "*"
+django-celery-results = "*"
+mbutil = "*"
+python-keycloak = "*"
+requests = "*"
+django-treenode = "*"
+
+[requires]
+python_version = "3.9"
