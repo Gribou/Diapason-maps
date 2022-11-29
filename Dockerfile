@@ -75,7 +75,7 @@ RUN echo "__version__ = '${VERSION_TAG}'" >> /app/api/app/version.py
 RUN python manage.py collectstatic --noinput
 
 #RUN apt-get update && apt-get -y install locales rsync curl && apt-get clean autoclean && apt-get autoremove --yes --purge && rm -rf /var/lib/{apt,dpkg,cache,log}/
-RUN apt-get update && apt-get -y install locales && apt-get clean autoclean && apt-get autoremove --yes --purge && rm -rf /var/lib/{apt,dpkg,cache,log}/
+RUN apt-get update && apt-get upgrade&& apt-get -y install locales && apt-get clean autoclean && apt-get autoremove --yes --purge && rm -rf /var/lib/{apt,dpkg,cache,log}/
 # set locales. fr_FR and en_US must be available for sia urls to be computed correctly
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
   sed -i '/fr_FR.UTF-8/s/^# //g' /etc/locale.gen && \
